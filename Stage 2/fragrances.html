@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WorldNose | Fragrances</title>
+  <meta charset="utf-8">
+  <meta name="Author" content="Robin Dale Villegas"/>
+  <meta name="Keywords" content="fragrance, perfume, scent notes, perfumers, WorldNose">
+  <meta name="Description" content="Browse fragrances and search by note, creator or release date. Save your favourites.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Stylesheets go here ↓↓↓↓↓ (layout first, then colours + fonts, then graphics) -->
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/colours-fonts.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<!-- soft blobs floating in the background -->
+<div class="blob-bg" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+</div>
+
+<!-- ===== top bar: logo + navigation ===== -->
+<header class="topbar">
+  <a class="logo"><span>WorldNose</span></a>
+  <nav aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="fragrances.html" aria-current="page">Fragrances</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ===== main content ===== -->
+<main id="main">
+  <div class="browse-wrap">
+    <h1 class="section-title">Browse fragrances</h1>
+    <p class="section-sub">Search by note, creator, or release date</p>
+
+    <form class="search-pill" id="searchForm" role="search" action="fragrances.html" method="get">
+      <div class="search-field">
+        <label for="s-notes">Notes</label>
+        <input id="s-notes" name="notes" type="text" placeholder="e.g. vanilla, bergamot" autocomplete="off">
+      </div>
+      <div class="search-field">
+        <label for="s-creator">Creator</label>
+        <input id="s-creator" name="creator" type="text" placeholder="Search fragrant artist" autocomplete="off">
+      </div>
+      <div class="search-field">
+        <label for="s-date">Release date</label>
+        <input id="s-date" name="date" type="text" placeholder="e.g. Jun 2026" autocomplete="off">
+      </div>
+      <button class="search-go" type="submit" aria-label="Search fragrances">Go</button>
+    </form>
+
+    <div class="filter-chips" role="group" aria-label="Filter by scent family">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="chip" data-filter="floral" aria-pressed="false">Florals</button>
+      <button type="button" class="chip" data-filter="citrus" aria-pressed="false">Citrus</button>
+      <button type="button" class="chip" data-filter="woody" aria-pressed="false">Woody</button>
+      <button type="button" class="chip" data-filter="gourmand" aria-pressed="false">Gourmand</button>
+      <button type="button" class="chip" data-filter="aquatic" aria-pressed="false">Aquatic</button>
+      <button type="button" class="chip" data-filter="spicy" aria-pressed="false">Spicy</button>
+      <button type="button" class="chip" data-filter="favourites" aria-pressed="false">Favourites</button>
+    </div>
+
+    <div class="result-info">
+      <p id="resultCount" aria-live="polite">Showing 6 of 6 fragrances</p>
+      <button type="button" class="clear-btn" id="clearBtn">Clear search</button>
+    </div>
+    <p class="empty-msg" id="emptyMsg" hidden></p>
+
+    <ul class="perfume-grid" id="perfumeGrid">
+      <li class="perfume-card fam-floral" data-id="peony-pop" data-family="floral" data-notes="peony, pink pepper, musk" data-creator="lena marlowe" data-date="jun 2026">
+        <div class="p-thumb" aria-hidden="true"></div>
+        <div class="p-body">
+          <p class="p-tag">Floral</p>
+          <h2 class="p-title">Peony Pop</h2>
+          <p class="p-notes">Peony, pink pepper, musk</p>
+          <p class="p-creator">Nose: Lena Marlowe</p>
+          <div class="p-foot">
+            <span class="p-date">Jun 2026</span>
+            <button type="button" class="p-heart" aria-pressed="false" aria-label="Save Peony Pop to favourites"><span class="heart-off" aria-hidden="true">Save</span><span class="heart-on" aria-hidden="true">Saved</span></button>
+          </div>
+        </div>
+      </li>
+      <li class="perfume-card fam-citrus" data-id="sunny-zest" data-family="citrus" data-notes="mandarin, neroli, cedar" data-creator="mateo vidal" data-date="may 2026">
+        <div class="p-thumb" aria-hidden="true"></div>
+        <div class="p-body">
+          <p class="p-tag">Citrus</p>
+          <h2 class="p-title">Sunny Zest</h2>
+          <p class="p-notes">Mandarin, neroli, cedar</p>
+          <p class="p-creator">Nose: Mateo Vidal</p>
+          <div class="p-foot">
+            <span class="p-date">May 2026</span>
+            <button type="button" class="p-heart" aria-pressed="false" aria-label="Save Sunny Zest to favourites"><span class="heart-off" aria-hidden="true">Save</span><span class="heart-on" aria-hidden="true">Saved</span></button>
+          </div>
+        </div>
+      </li>
+      <li class="perfume-card fam-woody" data-id="amber-hush" data-family="woody" data-notes="sandalwood, amber, vanilla" data-creator="ines okafor" data-date="apr 2026">
+        <div class="p-thumb" aria-hidden="true"></div>
+        <div class="p-body">
+          <p class="p-tag">Woody</p>
+          <h2 class="p-title">Amber Hush</h2>
+          <p class="p-notes">Sandalwood, amber, vanilla</p>
+          <p class="p-creator">Nose: Ines Okafor</p>
+          <div class="p-foot">
+            <span class="p-date">Apr 2026</span>
+            <button type="button" class="p-heart" aria-pressed="false" aria-label="Save Amber Hush to favourites"><span class="heart-off" aria-hidden="true">Save</span><span class="heart-on" aria-hidden="true">Saved</span></button>
+          </div>
+        </div>
+      </li>
+      <li class="perfume-card fam-gourmand" data-id="cloud-candy" data-family="gourmand" data-notes="marshmallow, tonka, milk" data-creator="lena marlowe" data-date="mar 2026">
+        <div class="p-thumb" aria-hidden="true"></div>
+        <div class="p-body">
+          <p class="p-tag">Gourmand</p>
+          <h2 class="p-title">Cloud Candy</h2>
+          <p class="p-notes">Marshmallow, tonka, milk</p>
+          <p class="p-creator">Nose: Lena Marlowe</p>
+          <div class="p-foot">
+            <span class="p-date">Mar 2026</span>
+            <button type="button" class="p-heart" aria-pressed="false" aria-label="Save Cloud Candy to favourites"><span class="heart-off" aria-hidden="true">Save</span><span class="heart-on" aria-hidden="true">Saved</span></button>
+          </div>
+        </div>
+      </li>
+      <li class="perfume-card fam-aquatic" data-id="sea-glass" data-family="aquatic" data-notes="sea salt, jasmine, driftwood" data-creator="mateo vidal" data-date="feb 2026">
+        <div class="p-thumb" aria-hidden="true"></div>
+        <div class="p-body">
+          <p class="p-tag">Aquatic</p>
+          <h2 class="p-title">Sea Glass</h2>
+          <p class="p-notes">Sea salt, jasmine, driftwood</p>
+          <p class="p-creator">Nose: Mateo Vidal</p>
+          <div class="p-foot">
+            <span class="p-date">Feb 2026</span>
+            <button type="button" class="p-heart" aria-pressed="false" aria-label="Save Sea Glass to favourites"><span class="heart-off" aria-hidden="true">Save</span><span class="heart-on" aria-hidden="true">Saved</span></button>
+          </div>
+        </div>
+      </li>
+      <li class="perfume-card fam-spicy" data-id="cinnamon-kiss" data-family="spicy" data-notes="cinnamon, clove, orange" data-creator="ines okafor" data-date="jan 2026">
+        <div class="p-thumb" aria-hidden="true"></div>
+        <div class="p-body">
+          <p class="p-tag">Spicy</p>
+          <h2 class="p-title">Cinnamon Kiss</h2>
+          <p class="p-notes">Cinnamon, clove, orange</p>
+          <p class="p-creator">Nose: Ines Okafor</p>
+          <div class="p-foot">
+            <span class="p-date">Jan 2026</span>
+            <button type="button" class="p-heart" aria-pressed="false" aria-label="Save Cinnamon Kiss to favourites"><span class="heart-off" aria-hidden="true">Save</span><span class="heart-on" aria-hidden="true">Saved</span></button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Robin Villegas. Made with love for WorldNose.</p>
+</footer>
+
+<!-- back to top button (same code as my earlier projects) -->
+<button type="button" id="myBtn" onclick="TopFunction()" title="Go to top" aria-label="Back to top">Top</button>
+
+<!-- JavaScript goes at the end of the body so the page loads first -->
+<script src="js/backtotop.js"></script>
+</body>
+</html>
