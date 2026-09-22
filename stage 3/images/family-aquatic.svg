@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
-<title>Wave</title>
-<g stroke="#3A1035" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
-<path d="M48 6 C48 6 36 20 36 27 A12 12 0 0 0 60 27 C60 20 48 6 48 6Z" fill="#CDEBFF"/>
-<path d="M6 50 Q18 36 30 50 T54 50 T78 50 T90 50 V86 H6 Z" fill="#9BDCFF"/></g>
-<path d="M12 68 Q24 56 36 68 T60 68 T84 68" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
-</svg>
