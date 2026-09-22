@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WorldNose Home</title>
+  <meta charset="utf-8">
+  <meta name="Author" content="Robin Dale Villegas"/>
+  <meta name="Keywords" content="fragrance, perfume, scent notes, perfumers, WorldNose">
+  <meta name="Description" content="WorldNose is a friendly guide to fragrance learn the notes, meet the perfumers and find scents you will love.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Stylesheets go here ↓↓↓↓↓ -->
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/colours-fonts.css">
+</head>
+
+<body>
+
+<!-- soft blobs floating in the background -->
+<div class="blob-bg" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+</div>
+
+<!-- top bar logo + navigation -->
+<header class="topbar">
+  <a class="logo"><span>WorldNose</span></a>
+  <nav aria-label="Main">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="fragrances.html">Fragrances</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- main content  -->
+<main id="main">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Your friendly scent guide</p>
+      <h1>Smell the world<br>through <span>fragrance</span></h1>
+      <p class="hero-text">A joyful and judgment-free guide to perfume. Learn the notes, meet the noses behind them, and find your next signature scent.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="fragrances.html">See more</a>
+        <a class="btn btn-ghost" href="#families">Explore scent families</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="families" aria-labelledby="families-title">
+    <h2 class="section-title" id="families-title">Explore by scent family</h2>
+    <p class="section-sub">Everyone's nose starts somewhere. Pick a mood.</p>
+    <ul class="family-grid">
+      <li>
+        <a class="family-card fam-floral" href="fragrances.html?family=floral">
+          <span class="icon-slot" aria-hidden="true"></span>
+          <span class="family-text"><span class="family-name">Florals</span><span class="family-notes">Peony, rose, jasmine</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="family-card fam-citrus" href="fragrances.html?family=citrus">
+          <span class="icon-slot" aria-hidden="true"></span>
+          <span class="family-text"><span class="family-name">Citrus</span><span class="family-notes">Mandarin, lemon, neroli</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="family-card fam-woody" href="fragrances.html?family=woody">
+          <span class="icon-slot" aria-hidden="true"></span>
+          <span class="family-text"><span class="family-name">Woody</span><span class="family-notes">Cedar, sandalwood, amber</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="family-card fam-gourmand" href="fragrances.html?family=gourmand">
+          <span class="icon-slot" aria-hidden="true"></span>
+          <span class="family-text"><span class="family-name">Gourmand</span><span class="family-notes">Vanilla, tonka, caramel</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="family-card fam-aquatic" href="fragrances.html?family=aquatic">
+          <span class="icon-slot" aria-hidden="true"></span>
+          <span class="family-text"><span class="family-name">Aquatic</span><span class="family-notes">Sea salt, driftwood</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="family-card fam-spicy" href="fragrances.html?family=spicy">
+          <span class="icon-slot" aria-hidden="true"></span>
+          <span class="family-text"><span class="family-name">Spicy</span><span class="family-notes">Cinnamon, clove, pepper</span></span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="banner" aria-labelledby="banner-title">
+    <h2 id="banner-title">Save the scents you love</h2>
+    <p>Tap the heart on any fragrance to keep it. Use the Favourites filter to find your saved scents again.</p>
+    <a class="btn btn-yellow" href="fragrances.html">Browse fragrances</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Robin Villegas. Made with love for WorldNose.</p>
+</footer>
+
+<!-- back to top button -->
+<button type="button" id="myBtn" onclick="TopFunction()" title="Go to top" aria-label="Back to top">Top</button>
+
+<!-- JavaScript goes at the end of the body so the page loads first -->
+<script src="js/backtotop.js"></script>
+</body>
+</html>
